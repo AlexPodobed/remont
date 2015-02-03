@@ -288,6 +288,8 @@ body{
     width: 100%;
     background: url("../assets/images/wall.jpg");
     background-size: cover;
+    border-bottom: 1px solid rgb(66, 65, 66);
+    box-shadow: 1px 0 4px rgb(27, 27, 27);
 
     .portfolio-heading{
       margin-top: 250px;
@@ -303,13 +305,17 @@ body{
       background: #F6F6F6;
       padding: 30px 30px;
       .work-item{
-        height: 300px;
+        margin-bottom: 25px;
 
         .description{
           h4{
             font-family: @headingFont;
             font-size: 19px;
             font-weight: 800;
+
+            a{
+              color: #696969;
+            }
           }
         }
 
@@ -318,10 +324,29 @@ body{
           max-height: 233px;
           img{
             width: 100%;
+            max-height: 223px;
           }
         }
       }
 
+    }
+  }
+}
+
+.work-preview-wrapper{
+  .preview{
+    margin-top: 160px;
+    padding: 40px 0;
+
+    .row{
+      margin-top: 30px;
+    }
+
+    .preview-image{
+      padding: 10px;
+      img{
+        width: 100%;
+      }
     }
   }
 }
@@ -342,7 +367,15 @@ footer{
   }
 }
 
-
+@media screen and (max-width: 1200px) {
+  .portfolio-wrapper{
+    .picture{
+      img{
+        max-height: 181px !important;
+      }
+    }
+  }
+}
 
 
 @media screen and (max-width: 992px) {
@@ -367,6 +400,14 @@ footer{
   #why-we{
     h1{
       font-size: 31px;
+    }
+  }
+
+  .portfolio-wrapper{
+    .picture{
+      img{
+        max-height: 211px !important;
+      }
     }
   }
 }
@@ -401,6 +442,14 @@ footer{
         background: none;
     }
   }
+  .portfolio-wrapper{
+    .picture{
+      img{
+        max-height: 201px !important;
+      }
+    }
+  }
+
 }
 
 @media screen and (max-width: 740px) {
@@ -416,6 +465,14 @@ footer{
 
     .contact-info{
       margin-top: 40px;
+    }
+  }
+
+  .portfolio-wrapper{
+    .picture{
+      img{
+        max-height: 150px !important;
+      }
     }
   }
 }
@@ -434,18 +491,22 @@ footer{
 @media screen and (max-width: 580px) {
 
   #why-we{
-//    h1{
-//      font-size: 19px;
-//    }
-//    h3{
-//      font-size: 17px;
-//    }
 
     .why-we-items {
       height: 200px;
     }
   }
-
+  .portfolio-wrapper{
+    .work-item{
+      width: 100%;
+    }
+    .picture{
+      margin: 0 auto;
+      img{
+        max-height: inherit !important;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 520px) {

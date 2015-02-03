@@ -17,8 +17,14 @@ angular.module('remont', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ng
                 url: '/our_works',
                 templateUrl: 'app/portfolio/portfolio.html',
                 controller: 'PortfolioCtrl'
+            })
+            .state('workPreview', {
+                url: '/our_works/:id',
+                templateUrl: 'app/workPreview/workpreview.html',
+                controller: 'WorkPreviewCtrl'
             });
 
+//
 
         $urlRouterProvider.otherwise('/home');
     })

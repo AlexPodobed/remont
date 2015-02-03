@@ -13,10 +13,12 @@
       <div class="row">
         <div class="col-md-4 col-sm-6 col-xs-6 work-item text-center" ng-repeat="work in listOfWorks">
           <div class="picture">
-            <img src="{{work.img}}" alt=""/>
+              <a ui-sref="workPreview({id:work.id})"><img src="{{work.img}}" alt=""/></a>
           </div>
           <div class="description text-center">
-            <h4>{{work.descr}}</h4>
+            <h4>
+                <a ui-sref="workPreview({id:work.id})">{{work.descr}}</a>
+            </h4>
           </div>
         </div>
       </div>

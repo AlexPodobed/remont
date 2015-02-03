@@ -5,22 +5,28 @@ angular.module('remont')
     $scope.listOfWorks = [
       {
         'img': 'assets/images/1work.jpg',
-        'descr': 'Гостинная'
+        'descr': 'Гостинная',
+        'id': '1'
       }, {
         'img': 'assets/images/2work.jpg',
-        'descr': 'Кухня'
+        'descr': 'Кухня',
+        'id': '2'
       }, {
         'img': 'assets/images/3work.jpg',
-        'descr': 'Спальня'
+        'descr': 'Спальня',
+        'id': '3'
       }, {
         'img': 'assets/images/4work.jpg',
-        'descr': 'Дача'
+        'descr': 'Дача',
+        'id': '4'
       }, {
         'img': 'assets/images/5work.jpg',
-        'descr': 'Детская'
+        'descr': 'Детская',
+        'id': '5'
       }, {
         'img': 'assets/images/6work.jpg',
-        'descr': 'Залл'
+        'descr': 'Залл',
+        'id': '6'
       }
     ];
 
