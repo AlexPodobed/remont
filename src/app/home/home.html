@@ -1,4 +1,5 @@
 
+
 <section id="home">
   <div class="container">
     <div class="welcome-block text-center">
@@ -22,10 +23,10 @@
       <div class="col-sm-4">
         <div class="media">
           <div class="media-left">
-            <a href="#"><img src="http://riotdesign.eu/assets/img/links-about.jpg" alt=""/></a>
+            <a ui-sref="home"><img src="http://riotdesign.eu/assets/img/links-about.jpg" alt=""/></a>
           </div>
           <div class="media-body ">
-            <h4 class="media-heading"><a href="#">О нас</a></h4>
+            <h4 class="media-heading"><a ui-sref="home">О нас</a></h4>
             <p class="hidden-sm">
               Информация о нашей компании
             </p>
@@ -35,10 +36,10 @@
       <div class="col-sm-4">
         <div class="media">
           <div class="media-left">
-            <a href="#"><img src="http://riotdesign.eu/assets/img/links-portfolio.jpg" alt=""/></a>
+            <a ui-sref="portfolio"><img src="http://riotdesign.eu/assets/img/links-portfolio.jpg" alt=""/></a>
           </div>
           <div class="media-body ">
-            <h4 class="media-heading"><a href="#">Наши Работы</a></h4>
+            <h4 class="media-heading"><a ui-sref="portfolio">Наши Работы</a></h4>
             <p class="hidden-sm">
               Примеры наших работ
             </p>
@@ -48,10 +49,10 @@
       <div class="col-sm-4">
         <div class="media">
           <div class="media-left">
-            <a href="#"><img src="http://riotdesign.eu/assets/img/links-contatti.jpg" alt=""/></a>
+            <a ui-sref="contacts"><img src="http://riotdesign.eu/assets/img/links-contatti.jpg" alt=""/></a>
           </div>
           <div class="media-body ">
-            <h4 class="media-heading"><a href="#">Контакты</a></h4>
+            <h4 class="media-heading"><a ui-sref="contacts">Контакты</a></h4>
             <p class="hidden-sm">
               Как с нами связаться
             </p>
@@ -72,7 +73,7 @@
     <div class="schema">
       <div class="row">
         <div class="col-sm-4 col-xs-6 schema-item">
-          <div><span class="sprite sprite-1call"></span></div>
+          <div><span class="sprite sprite-1call animated"></span></div>
           <div class="schema-descr">
             <p>Вы звоните нам</p>
             <p>Или мы вам</p>
@@ -130,6 +131,26 @@
 
   </div>
 </section>
+
+<section id="why-we">
+  <div class="container">
+    <div class="heading text-center text-uppercase">
+      <h1>Почему лучше обратиться именно к нам?</h1>
+      <h3>Более 20 лет опыта в строительном бизнесе</h3>
+    </div>
+    <div class="why-we-descr">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-6 why-we-items" ng-repeat="item in whyWeItems">
+          <h4>{{item.heading}}</h4>
+          <p>{{item.description}}</p>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
 <footer>
     <div class="container">

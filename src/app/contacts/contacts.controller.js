@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('remont')
-  .controller('MainCtrl', function ($scope) {
+  .controller('ContactsCtrl', function ($scope) {
     $scope.awesomeThings = [
       {
         'title': 'AngularJS',
@@ -59,7 +59,7 @@ angular.module('remont')
       }
     ];
 
-    console.log('main ctrl working properly');
+    console.log('contacts ctrl working properly');
     angular.forEach($scope.awesomeThings, function(awesomeThing) {
       awesomeThing.rank = Math.random();
     });

@@ -8,11 +8,17 @@ angular.module('remont', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ng
                 templateUrl: 'app/home/home.html',
                 controller: 'HomeCtrl'
             })
-            .state('main', {
-                url: '/main',
-                templateUrl: 'app/main/main.html',
-                controller: 'MainCtrl'
+            .state('contacts', {
+                url: '/contacts',
+                templateUrl: 'app/contacts/contacts.html',
+                controller: 'ContactsCtrl'
+            })
+            .state('portfolio', {
+                url: '/our_works',
+                templateUrl: 'app/portfolio/portfolio.html',
+                controller: 'PortfolioCtrl'
             });
+
 
         $urlRouterProvider.otherwise('/home');
     })

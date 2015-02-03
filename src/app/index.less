@@ -2,12 +2,21 @@
 @import url(http://fonts.googleapis.com/css?family=Poiret+One&subset=latin,cyrillic);
 
 @bg-text-color: #fff;
-@fn-family: 'Poiret One', Arial, cursive;
+@headingFont: 'Poiret One', Arial, cursive;
+@mainFont: "Open Sans", Arial;
 @sprite: url('../assets/images/csg-54cfb122b6749.png');
+
+//mixins
+.bigHeadingFont{
+  font-family: @headingFont;
+  font-size: 53px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.49);
+  color: @bg-text-color;
+}
 
 
 body{
-  font-family: @fn-family;
+  font-family: @mainFont;
   padding: 0;
   margin: 0;
 }
@@ -24,6 +33,67 @@ body{
 
   img.pull-right {
     width: 50px;
+  }
+}
+
+#nav{
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+  margin-top: 80px;
+
+  &.fixed{
+    position: fixed;
+    margin-top: 0;
+
+    .navbar-inner{
+      background: rgba(0, 0, 0, 0.49);
+
+    }
+
+  }
+
+
+  .navbar-inner{
+    border: none;
+    padding: 10px 0;
+    border-radius: 0;
+
+    .nav{
+      .active,
+      li:hover{
+        a{
+          opacity: 1;
+        }
+      }
+      li{
+        margin: 0 5px;
+
+        &:hover a{
+          color: #5e5e5e !important;
+          text-shadow: 1px 1px 1px rgba(195, 195, 195, 0.44);
+        }
+      }
+
+      a{
+        color: #fff;
+        opacity: 0.7;
+        font-family: @headingFont;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.49);
+        font-weight: 700;
+        font-size: 19px;
+        padding: 5px 10px;
+
+        &:focus{
+          background: none;
+        }
+
+        &:hover{
+          background-color: #eeeeee;
+        }
+      }
+    }
+
   }
 }
 
@@ -54,13 +124,7 @@ body{
 
 
     h1 {
-      font-family: @fn-family;
-      font-size: 53px;
-      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.49);
-//      display: inline-block;
-//      background: rgba(255, 255, 255, 0.36);
-//      box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.24);
-//      padding: 29px;
+      .bigHeadingFont;
     }
   }
 
@@ -68,7 +132,7 @@ body{
     color: @bg-text-color;
     z-index: 1;
     position: relative;
-    font-family: @fn-family;
+    font-family: @headingFont;
     margin-top: 140px;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.49);
 
@@ -93,7 +157,7 @@ body{
     bottom: 20px;
     left: 50%;
     margin-left: -150px;
-    font-family: @fn-family;
+    font-family: @headingFont;
 
     a{
       color: @bg-text-color;
@@ -104,13 +168,14 @@ body{
 #grid-menu{
   background: #ebeeed;
   padding: 60px 0 30px 0;
+  border-bottom: 1px solid rgb(224, 224, 224);
 
   .media{
     border-bottom: solid 1px #c7c9c8;
     border-right: solid 1px #c7c9c8;
     background: #fff;
     margin-bottom: 30px;
-    font-family: "Open Sans", Arial;
+    font-family: @mainFont;
 
     .media-left{
       img{
@@ -123,9 +188,9 @@ body{
     }
   }
 }
-
 #how-we-work{
   padding: 60px 0;
+  font-family: @headingFont;
 
   .heading{
     margin-bottom: 60px;
@@ -152,6 +217,13 @@ body{
         &.sprite-4bringGoods{ background-position: 0 -409px;  }
         &.sprite-5makeRepearing{ background-position: 0 -546px; }
         &.sprite-6success{ background-position: 0 -683px; }
+
+        &:hover{
+          -webkit-animation-name: pulse;
+          animation-name: pulse;
+          -webkit-animation-duration: 1.75s;
+          animation-duration: 1.75s;
+        }
       }
 
       .schema-descr{
@@ -179,11 +251,86 @@ body{
     }
   }
 }
+#why-we{
+  padding: 60px 0;
+  background: #e8e8e8;
+  border-top: 1px solid #E7DBDB;
+
+  .heading{
+    margin-bottom: 60px;
+    font-family: @headingFont;
+
+
+    h1{
+      font-weight: bold;
+    }
+  }
+
+  .why-we-descr{
+    font-family: @mainFont;
+
+    .why-we-items{
+      margin-bottom: 25px;
+
+      h4{
+        font-weight: 600;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+
+.portfolio-wrapper{
+  .portfolio-header{
+    position: relative;
+    min-height: 600px;
+    width: 100%;
+    background: url("../assets/images/wall.jpg");
+    background-size: cover;
+
+    .portfolio-heading{
+      margin-top: 250px;
+
+      h1{
+        .bigHeadingFont;
+      }
+    }
+  }
+  .list-of-works{
+    padding: 30px 0;
+    .container{
+      background: #F6F6F6;
+      padding: 30px 30px;
+      .work-item{
+        height: 300px;
+
+        .description{
+          h4{
+            font-family: @headingFont;
+            font-size: 19px;
+            font-weight: 800;
+          }
+        }
+
+        .picture{
+          max-width: 350px;
+          max-height: 233px;
+          img{
+            width: 100%;
+          }
+        }
+      }
+
+    }
+  }
+}
+
 
 footer{
   padding: 30px 0;
   background: #505050;
-  font-family: "Open Sans", Arial;
+  font-family: @mainFont;
 
   .copyright{
     color: #bfbfbf;
@@ -195,8 +342,10 @@ footer{
   }
 }
 
-@media screen and (max-width: 992px) {
 
+
+
+@media screen and (max-width: 992px) {
   #home{
     min-height: 650px;
     .welcome-block{
@@ -209,6 +358,15 @@ footer{
 
     .contact-info{
       margin-top: 90px;
+    }
+  }
+  #grid-menu .media .media-left img{
+    width: 110px;
+  }
+
+  #why-we{
+    h1{
+      font-size: 31px;
     }
   }
 }
@@ -230,6 +388,19 @@ footer{
   .schema-item:nth-of-type(2n+2):after{
     left: 0;
   }
+  #why-we{
+    h1{
+      font-size: 27px;
+    }
+    .why-we-items {
+      height: 180px;
+    }
+  }
+  #nav{
+    &.fixed .navbar-inner{
+        background: none;
+    }
+  }
 }
 
 @media screen and (max-width: 740px) {
@@ -247,6 +418,34 @@ footer{
       margin-top: 40px;
     }
   }
+}
+@media screen and (max-width: 650px) {
+  #why-we{
+    h1{
+      font-size: 23px;
+    }
+    h3{
+      font-size: 19px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 580px) {
+
+  #why-we{
+//    h1{
+//      font-size: 19px;
+//    }
+//    h3{
+//      font-size: 17px;
+//    }
+
+    .why-we-items {
+      height: 200px;
+    }
+  }
+
 }
 
 @media screen and (max-width: 520px) {
@@ -281,8 +480,19 @@ footer{
       }
     }
   }
-
+  .why-we-items {
+    width: 100%;
+    height: inherit !important;
+  }
 }
+@media (min-width: 768px){
+  .why-we-items {
+    height: 150px;
+  }
+}
+
+
+
 
 // injector
 // endinjector

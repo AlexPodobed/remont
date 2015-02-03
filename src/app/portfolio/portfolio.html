@@ -1,0 +1,26 @@
+<div class="portfolio-wrapper">
+  <section class="portfolio-header">
+    <div class="container">
+      <div class="portfolio-heading text-uppercase">
+        <h1>Здесь представлены
+          <br/> наши работы</h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="list-of-works">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-6 work-item text-center" ng-repeat="work in listOfWorks">
+          <div class="picture">
+            <img src="{{work.img}}" alt=""/>
+          </div>
+          <div class="description text-center">
+            <h4>{{work.descr}}</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>

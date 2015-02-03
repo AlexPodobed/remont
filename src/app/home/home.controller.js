@@ -2,65 +2,32 @@
 
 angular.module('remont')
   .controller('HomeCtrl', function ($scope) {
-    $scope.awesomeThings = [
+    $scope.whyWeItems = [
       {
-        'title': 'AngularJS',
-        'url': 'https://angularjs.org/',
-        'description': 'HTML enhanced for web apps!',
-        'logo': 'angular.png'
+        "heading": 'Гарантии на все виды работ',
+        "description": "Мы уверены, что гарантия Вам не понадобиться, однако, это неотъемлимая часть нашего договора. Качественная работа и проверенные временем материалы простой способ выполнения гарантийных обязательств."
       },
       {
-        'title': 'BrowserSync',
-        'url': 'http://browsersync.io/',
-        'description': 'Time-saving synchronised browser testing.',
-        'logo': 'browsersync.png'
+        "heading": "Ответственность по договору",
+        "description": "Мы согласовываем и заключаем в Вами договор, в котором честно прописываем нашу ответственность за работу, плюс к этому точные сметы и выверенные дополнительные соглашения на сложные работы."
       },
       {
-        'title': 'GulpJS',
-        'url': 'http://gulpjs.com/',
-        'description': 'The streaming build system.',
-        'logo': 'gulp.png'
+        "heading": "Соблюдение сроков",
+        "description": "Конкретные, согласованные сроки. Мы указываем в договоре все стадии проделанных работ. Так что Вы будете знать и контролировать, когда работы завершаться и какая стадия проходит в данный момент."
       },
       {
-        'title': 'Jasmine',
-        'url': 'http://jasmine.github.io/',
-        'description': 'Behavior-Driven JavaScript.',
-        'logo': 'jasmine.png'
+        "heading": "Оплата по факту",
+        "description": "Оплату мы берем только по факту выполненных работ, прописанных в Договоре"
       },
       {
-        'title': 'Karma',
-        'url': 'http://karma-runner.github.io/',
-        'description': 'Spectacular Test Runner for JavaScript.',
-        'logo': 'karma.png'
+        "heading": "Квалифицированные специалисты и мастера",
+        "description": "Только высококвалифицированные мастера и специалисты с более чем 15 летним опытом работы. На каждый вид работ свой масте и всегда качественный инструмент."
       },
       {
-        'title': 'Protractor',
-        'url': 'https://github.com/angular/protractor',
-        'description': 'End to end test framework for AngularJS applications built on top of WebDriverJS.',
-        'logo': 'protractor.png'
-      },
-      {
-        'title': 'jQuery',
-        'url': 'http://jquery.com/',
-        'description': 'jQuery is a fast, small, and feature-rich JavaScript library.',
-        'logo': 'jquery.jpg'
-      },
-      {
-        'title': 'Bootstrap',
-        'url': 'http://getbootstrap.com/',
-        'description': 'Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.',
-        'logo': 'bootstrap.png'
-      },
-      {
-        'title': 'Less',
-        'url': 'http://lesscss.org/',
-        'description': 'Less extends the CSS language, adding features that allow variables, mixins, functions and many other techniques.',
-        'logo': 'less.png'
+        "heading": "Высокое качество строительных материалов",
+        "description": "Вам не нужно заботиться о том, что купить и в каких количествах, и как это все доставить. Все это сделает наша фирма за приемлимые цены."
       }
-    ];
+    ]
 
-    console.log('main ctrl working properly');
-    angular.forEach($scope.awesomeThings, function(awesomeThing) {
-      awesomeThing.rank = Math.random();
-    });
+    console.log('contacts ctrl working properly');
   });

@@ -1,6 +1,6 @@
 'use strict';
 
-describe('The main view', function () {
+describe('The contacts view', function () {
   var page;
 
   beforeEach(function () {
