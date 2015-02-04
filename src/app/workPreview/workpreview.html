@@ -1,20 +1,24 @@
 
 
 <div class="work-preview-wrapper">
-    <div class="container">
+        <section class="head-logo">
+
+        </section>
+
         <section class="preview">
-            <div class="go-back">
-                <a ui-sref="portfolio">Go back</a>
-            </div>
-            <h3>{{worksPreviewInfo.heading}}</h3>
-            <div class="row">
-                <div class="col-md-4" ng-bind-html="worksPreviewInfo.description"></div>
-                <div class="col-md-8">
-                    <div class="preview-image" ng-repeat="photo in worksPreviewInfo.photos ">
-                        <img src="{{photo}}" alt=""/>
+            <div class="container">
+                <div class="go-back">
+                    <a ui-sref="portfolio">Go back</a>
+                </div>
+                <h3>{{worksPreviewInfo.heading}}</h3>
+                <div class="row">
+                    <div class="col-md-4" ng-bind-html="worksPreviewInfo.description"></div>
+                    <div class="col-md-8">
+                        <div class="preview-image" ng-repeat="photo in worksPreviewInfo.photos ">
+                            <img src="{{photo}}" alt=""/>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-    </div>
 </div>
