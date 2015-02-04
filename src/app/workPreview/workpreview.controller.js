@@ -66,10 +66,18 @@ angular.module('remont')
                 ]
             }
         };
+        function preloadImgs(){
+            var imgsArr = worksPreviewInfo[$state.params.id].photos;
+
+            imgsArr.map(function(el){
+                var img = new Image();
+                img.src = el;
+
+            });
+        }
 
         $scope.worksPreviewInfo = worksPreviewInfo[$state.params.id];
-//        $scope.goBack = function(){
-//            $state.go('^');
-//        };
+        preloadImgs();
+
         console.log('WorkPreviewCtrl is working properly');
     }]);

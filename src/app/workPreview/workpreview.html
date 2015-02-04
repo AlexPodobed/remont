@@ -1,24 +1,29 @@
-
-
 <div class="work-preview-wrapper">
-        <section class="head-logo">
+    <section class="head-logo">
+        <div class="container">
+            <div class="head-text">
+                <h1>{{worksPreviewInfo.heading}}</h1>
+            </div>
+        </div>
+    </section>
 
-        </section>
-
-        <section class="preview">
-            <div class="container">
-                <div class="go-back">
-                    <a ui-sref="portfolio">Go back</a>
-                </div>
-                <h3>{{worksPreviewInfo.heading}}</h3>
-                <div class="row">
-                    <div class="col-md-4" ng-bind-html="worksPreviewInfo.description"></div>
-                    <div class="col-md-8">
-                        <div class="preview-image" ng-repeat="photo in worksPreviewInfo.photos ">
-                            <img src="{{photo}}" alt=""/>
-                        </div>
+    <section class="preview">
+        <div class="container">
+            <div class="go-back">
+                <a ui-sref="portfolio">Go back</a>
+            </div>
+            <h3>Description</h3>
+            <div class="row">
+                <div class="col-md-4" ng-bind-html="worksPreviewInfo.description"></div>
+                <div class="col-md-8">
+                    <div class="preview-image" ng-repeat="photo in worksPreviewInfo.photos ">
+                        <a href="{{photo}}" data-lightbox="work">
+                            <img src="{{photo}}" alt="" popup="" />
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 </div>
+<div ng-include="'components/footer/footer.html'"></div>

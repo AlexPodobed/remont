@@ -19,14 +19,17 @@
     <!-- css files will be automaticaly insert here -->
     <!-- endinject -->
     <!-- endbuild -->
+    <link rel="stylesheet" href="bower_components/lightbox/css/lightbox.css"/>
+
   </head>
   <body>
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <div ng-include="'components/navbar/navbar.html'"></div>
-    <div ui-view></div>
-    <div ng-include="'components/footer/footer.html'"></div>
+    <div class="ui-view-container">
+        <div ui-view></div>
+    </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

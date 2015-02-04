@@ -28,4 +28,13 @@ angular.module('remont', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ng
 
         $urlRouterProvider.otherwise('/home');
     })
+    .run(function($rootScope, $window){
+        $rootScope.$on('$stateChangeSuccess', function(e, toState, toParams, fromState){
+            if(fromState.name){
+                console.log(1)
+//                $window.scrollTo(0,1)
+                setTimeout(function(){$window.scrollTo(0,1);}, 0)
+            }
+        })
+    })
 ;
