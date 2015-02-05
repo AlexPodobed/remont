@@ -37,7 +37,6 @@ angular.module('remont')
             restrict: 'A',
             link: function (scope, el, attr) {
                 var height = $window.innerHeight;
-                console.log(height)
                 if (height > 650) {
 
                 }
@@ -51,13 +50,10 @@ angular.module('remont')
         return {
             restrict: 'A',
             link: function (scope, el, attr) {
-                console.log()
-
                 el.on('click', function () {
                     var diff = $window.innerWidth < 768 ? 0 : 50;
                     $("html, body").animate({ scrollTop: $(attr.scrollTo || '').offset().top - diff }, 800);
                 });
-
             }
         }
     }])
@@ -66,8 +62,6 @@ angular.module('remont')
         return {
             restrict: 'A',
             link: function (scope, el, attr) {
-                console.log(el[0])
-
                 $($window).on('scroll', function () {
                     el.css("background-position-y", $($window).scrollTop() / 1.5);
                 });

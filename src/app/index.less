@@ -419,6 +419,7 @@ body{
     width: 100%;
     min-height: 400px;
     background: url('../assets/images/contact.jpg');
+    background-position-y: 60%;
     background-size: cover;
     border-bottom: 1px solid rgb(219, 218, 218);
 
@@ -449,10 +450,57 @@ footer{
     }
   }
 }
+.slide-up-wrapper{
+  position: relative;
+  .slide-up{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.13);
+    bottom: 50%;
+    margin-bottom: -25px;
+    margin-left: -120px;
+    font-size: 26px;
+    padding-top: 8px;
+    cursor: pointer;
+    opacity: 0.39;
+    display: none;
+
+    &:hover{
+      color: #fff;
+    }
+
+    &.fixed{
+      display: block;
+    }
+  }
+
+}
 
 //   M E D I A    Q U E R I E S
+@media screen and (max-width: 1400px) and (min-width: 1300px) {
+  .slide-up-wrapper{
+    .slide-up{
+      margin-left: 0px;
+      left: 10px;
+    }
+  }
+}
 
+@media screen and (max-width: 1300px) and (min-width: 1200px) {
+  .slide-up-wrapper{
+    .slide-up{
+      margin-left: 0px;
+      left: -5px;
+      background: none;
 
+      &:hover{
+        opacity: 1;
+        color: #000;
+      }
+    }
+  }
+}
 @media screen and (max-width: 1200px) {
   .portfolio-wrapper{
     .picture{
@@ -466,11 +514,32 @@ footer{
       min-height: 500px;
     }
   }
-
+  .slide-up-wrapper{
+    .slide-up{
+      margin-left: 0;
+      left: 10px;
+      width: 34px;
+      height: 40px;
+      font-size: 22px;
+      padding-top: 6px;
+    }
+  }
 
 }
+@media screen and (max-width: 1050px) and (min-width: 992px){
+  .slide-up-wrapper{
+    .slide-up{
+      margin-left: 0px;
+      left: -3px;
+      background: none;
 
-
+      &:hover{
+        opacity: 1;
+        color: #000;
+      }
+    }
+  }
+}
 @media screen and (max-width: 992px) {
   #home{
     min-height: 650px;
@@ -512,6 +581,11 @@ footer{
         max-height: 211px !important;
       }
     }
+  }
+}
+@media screen and (max-width: 840px) {
+  .slide-up-wrapper{
+    display: none;
   }
 }
 @media screen and (max-width: 767px) {
@@ -565,7 +639,6 @@ footer{
   }
 
 }
-
 @media screen and (max-width: 740px) {
   #home{
     min-height: 600px;
@@ -606,8 +679,6 @@ footer{
     }
   }
 }
-
-
 @media screen and (max-width: 580px) {
 
   #why-we{
@@ -638,7 +709,6 @@ footer{
     }
   }
 }
-
 @media screen and (max-width: 520px) {
   #home{
     min-height: 500px;

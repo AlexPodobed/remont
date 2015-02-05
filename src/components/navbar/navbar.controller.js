@@ -5,9 +5,10 @@ angular.module('remont')
     $scope.date = new Date();
   })
   .directive('fixedMenu', ['$window', function($window){
-    function checkPosition(el){
-      if($window.scrollY >= 80){
-        $(el).addClass('fixed ');
+    function checkPosition(el, attr){
+      console.log($window.scrollY)
+      if($window.scrollY >= +attr.fixedMenu){
+        $(el).addClass('fixed');
 
       }else{
         $(el).removeClass('fixed');
@@ -17,10 +18,12 @@ angular.module('remont')
     return {
       restrict: 'A',
       link: function(scope, el, attr){
+        console.log(attr.fixedMenu)
+
         $($window).on('scroll', function(){
-          checkPosition(el);
+          checkPosition(el, attr);
         });
-        checkPosition(el);
+        checkPosition(el, attr);
       }
     }
   }]);

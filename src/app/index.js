@@ -24,10 +24,12 @@ angular.module('remont', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ng
                 controller: 'WorkPreviewCtrl'
             });
 
-//
-
         $urlRouterProvider.otherwise('/home');
     })
+    .controller('GlobalCtrl', ['$scope','$window', function($scope, $window){
+    console.log($window.innerHeight)
+        $scope.height =  $window.innerHeight;
+    }])
     .run(function($rootScope, $window){
         $rootScope.$on('$stateChangeSuccess', function(e, toState, toParams, fromState){
             if(fromState.name){

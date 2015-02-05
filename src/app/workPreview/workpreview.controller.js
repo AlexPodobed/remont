@@ -77,8 +77,5 @@ angular.module('remont')
         }
 
         $scope.worksPreviewInfo = worksPreviewInfo[$state.params.id];
-//        $scope.goBack = function(){
-//            $state.go('^');
-//        };
         console.log('WorkPreviewCtrl is working properly');
     }]);
