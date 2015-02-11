@@ -1,45 +1,25 @@
-
-
-<!--<div class=" navbar-inner" ng-controller="NavbarCtrl">-->
-
-  <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">-->
-    <!--<span class="sr-only">Toggle Navigation</span>-->
-    <!--<span class="icon-bar"></span>-->
-    <!--<span class="icon-bar"></span>-->
-    <!--<span class="icon-bar"></span>-->
-  <!--</button>-->
-
-
-  <!--<nav class="collapse navbar-collapse" role="navigation">-->
-    <!--<ul id="menu-primary-navigation-en" class="nav navbar-nav">-->
-      <!--<li class="menu-home"><a href="/en/" class=" roll"><span data-title="Home">Home</span></a></li>-->
-      <!--<li class="active menu-about"><a href="/en/about/" class=" roll"><span data-title="About">About</span></a></li>-->
-      <!--<li class="menu-portfolio"><a href="/en/portfolio/" class=" roll"><span-->
-        <!--data-title="Portfolio">Portfolio</span></a></li>-->
-      <!--<li class="menu-blog"><a href="/en/blog/" class=" roll"><span data-title="Blog">Blog</span></a></li>-->
-      <!--<li class="menu-contacts"><a href="/en/contacts/" class=" roll"><span data-title="Contacts">Contacts</span></a>-->
-      <!--</li>-->
-      <!--<li ui-sref-active="active"><a ui-sref="home">О нас</a></li>-->
-      <!--<li ui-sref-active="active"><a ui-sref="portfolio">Наши Работы</a></li>-->
-      <!--<li ui-sref-active="active"><a ui-sref="contacts">Контакты</a></li>-->
-
-
-    <!--</ul>-->
-  <!--</nav>-->
-
-<!--</div>-->
-
-<header id="nav" ng-controller="NavbarCtrl" fixed-menu="80">
+<header id="nav" ng-controller="NavbarCtrl" fixed-menu="{{fixedPoint}}" >
+  <div check-resize ng-model="fixedPoint"></div>
   <nav class="navbar navbar-inner">
     <div class="container">
-      <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-6">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse pull-right" aria-expanded="false" id="navbar">
         <ul class="nav navbar-nav">
           <li ui-sref-active="active"><a ui-sref="home" data-title="О нас">О нас</a></li>
           <li ui-sref-active="active"><a ui-sref="portfolio" data-title="Наши Работы">Наши Работы</a></li>
           <li ui-sref-active="active"><a ui-sref="contacts" data-title="Контакты">Контакты</a></li>
         </ul>
       </div>
+
     </div>
   </nav>
-
 </header>
+
