@@ -27,7 +27,6 @@ angular.module('remont', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ng
     $urlRouterProvider.otherwise('/home');
   })
   .controller('GlobalCtrl', ['$scope', '$window', function ($scope, $window) {
-    console.log($window.innerHeight)
     $scope.height = $window.innerHeight;
   }])
   .run(function ($rootScope, $window) {

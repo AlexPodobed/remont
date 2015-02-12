@@ -1,9 +1,9 @@
-<header id="nav" ng-controller="NavbarCtrl" fixed-menu="{{fixedPoint}}" >
-  <div check-resize ng-model="fixedPoint"></div>
+<header id="nav" ng-controller="NavbarCtrl" fixed-menu="{{common.fixedPoint}}"  ng-class="{'clickedMenu': common.isCollapsed}">
+  <div check-resize ng-model="common"></div>
   <nav class="navbar navbar-inner">
     <div class="container">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" ng-click="toggle(300)">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -11,15 +11,18 @@
         </button>
       </div>
 
-      <div class="collapse navbar-collapse pull-right" aria-expanded="false" id="navbar">
+      <div class="navbar-collapse" ng-class="{'collapse pull-right' : !common.isCollapsed}" aria-expanded="false" id="navbar" >
         <ul class="nav navbar-nav">
-          <li ui-sref-active="active"><a ui-sref="home" data-title="О нас">О нас</a></li>
-          <li ui-sref-active="active"><a ui-sref="portfolio" data-title="Наши Работы">Наши Работы</a></li>
-          <li ui-sref-active="active"><a ui-sref="contacts" data-title="Контакты">Контакты</a></li>
+          <li ui-sref-active="active" ng-click="toggle(50)"><a ui-sref="home" data-title="О нас">О нас</a></li>
+          <li ui-sref-active="active" ng-click="toggle(50)"><a ui-sref="portfolio" data-title="Наши Работы">Наши Работы</a></li>
+          <li ui-sref-active="active" ng-click="toggle(50)"><a ui-sref="contacts" data-title="Контакты">Контакты</a></li>
         </ul>
       </div>
 
     </div>
   </nav>
+
+
+
 </header>
 

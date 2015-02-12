@@ -3,8 +3,25 @@
 angular.module('remont')
   .controller('NavbarCtrl', function ($scope, $window) {
     $scope.date = new Date();
+    $scope.common = {
+      isCollapsed: false,
+      fixedPoint: ($window.innerWidth <= 767) ? 12 : 80
+    };
+    var $navbar = $('#nav .navbar-collapse');
+    $scope.toggle = function(ms){
+      if($window.innerWidth <= 767){
+        if(!$scope.common.isCollapsed){
+          $scope.common.isCollapsed = true;
+          $navbar.slideDown(ms);
+        }else{
+          $navbar.slideUp(ms, function(){
+            $scope.common.isCollapsed = false;
+            if(!$scope.$$phase){ $scope.$apply() }
+          });
+        }
+      }
 
-    $scope.fixedPoint = ($window.innerWidth <= 767) ? 10 : 80;
+    }
   })
   .directive('fixedMenu', ['$window', function($window){
     function checkPosition(el, attr){
@@ -42,7 +59,12 @@ angular.module('remont')
       };
     }
     function checkAndSetModel(scope){
-      scope.ngModel = ($window.innerWidth <= 767) ? 10 : 80;
+      if($window.innerWidth <= 767){
+        scope.ngModel.fixedPoint = 10;
+      }else{
+        scope.ngModel.fixedPoint = 80;
+        scope.ngModel.isCollapsed = false;
+      }
       if(!scope.$$phase){ scope.$apply() }
     }
 
