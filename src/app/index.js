@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('remont', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router'])
+angular.module('remont', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'angular-loading-bar'])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {
