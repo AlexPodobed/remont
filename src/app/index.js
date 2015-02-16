@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('remont', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router'])
+angular.module('remont', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'angular-loading-bar'])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {
@@ -32,8 +32,6 @@ angular.module('remont', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ng
   .run(function ($rootScope, $window) {
     $rootScope.$on('$stateChangeSuccess', function (e, toState, toParams, fromState) {
       if (fromState.name) {
-        console.log(1)
-//                $window.scrollTo(0,1)
         setTimeout(function () {
           $window.scrollTo(0, 1);
         }, 0)

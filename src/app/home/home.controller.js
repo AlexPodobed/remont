@@ -38,15 +38,12 @@ angular.module('remont')
             link: function (scope, el, attr) {
                 var height = $window.innerHeight;
                 if (height > 650) {
-
+                    el.innerHeight(height);
                 }
-                el.innerHeight(height);
-                console.log($window.innerHeight)
             }
         }
     }])
     .directive('scrollTo', ['$window', function ($window) {
-
         return {
             restrict: 'A',
             link: function (scope, el, attr) {
